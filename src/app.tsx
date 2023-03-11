@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import Header from "./components/Header";
+import Home from "./components/Home";
 
 
 const StyledApp = styled.div`
@@ -8,7 +10,8 @@ const StyledApp = styled.div`
 export function App() {
   return (
     <StyledApp>
-      <h1>Hey There</h1>
+      {/*<Header />*/}
+      <Home />
     </StyledApp>
   );
 }
