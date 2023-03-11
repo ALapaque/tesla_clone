@@ -8,7 +8,7 @@ const StyledApp = styled.div`
 export function App() {
   return (
     <StyledApp>
-      <h1>Hey</h1>
+      <h1>Hey There</h1>
     </StyledApp>
   );
 }
