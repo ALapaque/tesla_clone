@@ -39,6 +39,11 @@ export default function Home() {
 				leftButtonText="Custom Order"
 				rightButtonText="Existing Inventory"
 			/>
+			<Section
+				title="Accessories"
+				backgroundImage="images/accessories.jpg"
+				leftButtonText="Shop Now"
+			/>
 		</Container>
 	)
 }

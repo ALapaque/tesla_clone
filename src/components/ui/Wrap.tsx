@@ -15,6 +15,7 @@ const Wrap = styled.section<Props>`
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
+  scroll-snap-align: start;
 `
 
 export default Wrap

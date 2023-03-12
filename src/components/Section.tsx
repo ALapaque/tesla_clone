@@ -8,10 +8,10 @@ import WrapActions from "./ui/WrapActions";
 
 interface Props {
 	title: string,
-	description: string,
 	backgroundImage: string,
-	leftButtonText: string,
-	rightButtonText: string
+	description?: string,
+	leftButtonText?: string,
+	rightButtonText?: string
 }
 
 export default function Section({title, description, backgroundImage, leftButtonText, rightButtonText}: Props) {
@@ -19,17 +19,23 @@ export default function Section({title, description, backgroundImage, leftButton
 		<Wrap backgroundImage={backgroundImage}>
 			<ItemText>
 				<h1>{title}</h1>
-				<p>{description}</p>
+				{description && (
+					<p>{description}</p>
+				)}
 			</ItemText>
 
 			<WrapActions>
 				<ButtonGroup>
-					<LeftButton>
-						{leftButtonText}
-					</LeftButton>
-					<RightButton>
-						{rightButtonText}
-					</RightButton>
+					{leftButtonText && (
+						<LeftButton>
+							{leftButtonText}
+						</LeftButton>
+					)}
+					{rightButtonText && (
+						<RightButton>
+							{rightButtonText}
+						</RightButton>
+					)}
 				</ButtonGroup>
 
 				<DownArrow src="/images/down-arrow.svg"/>

@@ -8,11 +8,12 @@ const BaseButton = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 100px;
+  border-radius: 4px;
   opacity: 0.85;
   text-transform: uppercase;
   font-size: 0.75rem;
   cursor: pointer;
+	border: none;
 `
 
 export default BaseButton
