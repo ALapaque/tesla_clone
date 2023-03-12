@@ -20,7 +20,7 @@ const Navbar = (props: Omit<DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLE
 
 	return (
 		<>
-			<NavbarBackdrop/>
+			<NavbarBackdrop onClick={_handleOnClose}/>
 			<NavbarContent {...props}>
 				<Fade className='close-button' direction={"right"}>
 					<NavbarCloseButton
