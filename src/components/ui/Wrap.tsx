@@ -7,8 +7,7 @@ interface Props {
 const Wrap = styled.section<Props>`
 	box-sizing: border-box;
   width: 100%;
-	min-height: 100dvh;
-	height: -webkit-fill-available;
+	height: 100lvh;
   background-image: url(${props => props.backgroundImage});
 	background-position: center;
 	background-repeat: no-repeat;
