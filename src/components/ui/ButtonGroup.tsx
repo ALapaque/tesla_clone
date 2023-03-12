@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const ButtonGroup = styled.section`
+const ButtonGroup = styled.div`
 	display: flex;
 	align-items: flex-end;
 	justify-content: center;
@@ -8,6 +8,7 @@ const ButtonGroup = styled.section`
 	
 	@media (max-width: 600px) {
 		flex-direction: column;
+		align-items: center;
 		gap: 0.5rem;
 	}
 `

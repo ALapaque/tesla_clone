@@ -4,8 +4,7 @@ import ButtonGroup from "./ui/ButtonGroup";
 import LeftButton from "./ui/LeftButton";
 import RightButton from "./ui/RightButton";
 import WrapActions from "./ui/WrapActions";
-import {Fade, Slide} from "react-awesome-reveal";
-import DownArrow from "./ui/DownArrow";
+import {Fade} from "react-awesome-reveal";
 import SectionIndicator from "./ui/SectionIndicator";
 
 interface Props {
