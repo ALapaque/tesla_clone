@@ -6,11 +6,15 @@ export default class SectionModel {
 	public readonly leftButtonText?: string;
 	public readonly rightButtonText?: string;
 
-	constructor(object?: SectionModel) {
+	constructor(object?: Omit<SectionModel, 'getHref'>) {
 		if (object) {
 			return Object.assign(this, object)
 		}
 
 		return Object.create(this)
+	}
+
+	public get getHref(): string {
+		return `#${encodeURIComponent(this.title)}`
 	}
 }

@@ -1,11 +1,11 @@
-import Wrap from "./ui/Wrap";
+import Wrap from "./ui/section/Wrap";
 import ItemText from "./ui/ItemText";
 import ButtonGroup from "./ui/ButtonGroup";
-import LeftButton from "./ui/LeftButton";
-import RightButton from "./ui/RightButton";
-import WrapActions from "./ui/WrapActions";
+import LeftButton from "./ui/section/LeftButton";
+import RightButton from "./ui/section/RightButton";
+import WrapActions from "./ui/section/WrapActions";
 import {Fade} from "react-awesome-reveal";
-import SectionIndicator from "./ui/SectionIndicator";
+import SectionIndicator from "./ui/section/SectionIndicator";
 
 interface Props {
 	title: string,

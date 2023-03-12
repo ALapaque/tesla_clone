@@ -1,4 +1,4 @@
-import SectionContainer from "./ui/SectionContainer";
+import SectionContainer from "./ui/section/SectionContainer";
 import Section from "./Section";
 import sections from "../datasources/sections";
 import SectionModel from "../models/Section.model";

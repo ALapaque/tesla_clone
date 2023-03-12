@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import BaseButton from "./BaseButton";
+import BaseButton from "../BaseButton";
 
 const LeftButton = styled(BaseButton)`
 
