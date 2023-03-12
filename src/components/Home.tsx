@@ -32,6 +32,13 @@ export default function Home() {
 				leftButtonText="Custom Order"
 				rightButtonText="Existing Inventory"
 			/>
+			<Section
+				title="Solar panels"
+				description="Order Online for TouchLess Delivery"
+				backgroundImage="images/solar-panels.jpg"
+				leftButtonText="Custom Order"
+				rightButtonText="Existing Inventory"
+			/>
 		</Container>
 	)
 }
