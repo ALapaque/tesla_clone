@@ -5,6 +5,7 @@ const WrapActions = styled.div`
 	flex-direction: column;
 	padding-bottom: 5rem;
 	gap: 3.5rem;
+	width: 100%;
 `
 
 export default WrapActions

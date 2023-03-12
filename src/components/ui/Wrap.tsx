@@ -5,6 +5,7 @@ interface Props {
 }
 
 const Wrap = styled.section<Props>`
+	position: relative;
 	box-sizing: border-box;
   width: 100%;
 	height: 100dvh;

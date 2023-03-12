@@ -10,6 +10,7 @@ const HeaderContainer = styled.header`
 	align-items: center;
 	justify-content: space-between;
 	padding: 0 20px;
+	z-index: 1;
 	
 	img#logo {
 		height: 2dvh;

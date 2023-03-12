@@ -4,24 +4,35 @@ import ButtonGroup from "./ui/ButtonGroup";
 import LeftButton from "./ui/LeftButton";
 import RightButton from "./ui/RightButton";
 import WrapActions from "./ui/WrapActions";
-import {Fade} from "react-awesome-reveal";
+import {Fade, Slide} from "react-awesome-reveal";
+import DownArrow from "./ui/DownArrow";
+import SectionIndicator from "./ui/SectionIndicator";
 
 interface Props {
 	title: string,
 	image: string,
 	description?: string,
 	leftButtonText?: string,
-	rightButtonText?: string
+	rightButtonText?: string,
+	showIndicator?: boolean
 }
 
-export default function Section({title, description, image, leftButtonText, rightButtonText}: Props) {
+export default function Section(
+	{
+		title,
+		description,
+		image,
+		leftButtonText,
+		rightButtonText,
+		showIndicator = false
+	}: Props
+) {
 	return (
 		<Wrap
 			id={encodeURIComponent(title)}
 			backgroundImage={image}>
 			<ItemText>
 				<Fade
-					triggerOnce
 					cascade
 					direction={"up"}>
 					<h1>{title}</h1>
@@ -31,11 +42,9 @@ export default function Section({title, description, image, leftButtonText, righ
 				</Fade>
 			</ItemText>
 
-			<Fade
-				triggerOnce
-				cascade
-				direction={"up"}>
-				<WrapActions>
+
+			<WrapActions>
+				<Fade cascade delay={500} direction={"up"}>
 					<ButtonGroup>
 						{leftButtonText && (
 							<LeftButton>
@@ -48,8 +57,10 @@ export default function Section({title, description, image, leftButtonText, righ
 							</RightButton>
 						)}
 					</ButtonGroup>
-				</WrapActions>
-			</Fade>
+				</Fade>
+			</WrapActions>
+
+			{showIndicator && <SectionIndicator/>}
 		</Wrap>
 	)
 }

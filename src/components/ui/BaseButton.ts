@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 const BaseButton = styled.button`
-  background-color: rgba(23, 26, 32, .8);
+  background-color: rgba(23, 26, 32, 0.8);
+	backdrop-filter: blur(6px);
   height: 40px;
   width: 256px;
   color: white;
@@ -10,8 +11,7 @@ const BaseButton = styled.button`
   align-items: center;
   border-radius: 4px;
   opacity: 0.85;
-  text-transform: uppercase;
-  font-size: 0.75rem;
+	font-weight: 800;
   cursor: pointer;
 	border: none;
 `

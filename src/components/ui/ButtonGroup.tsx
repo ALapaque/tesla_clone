@@ -6,7 +6,7 @@ const ButtonGroup = styled.section`
 	justify-content: center;
 	gap: 2rem;
 	
-	@media (max-width: 768px) {
+	@media (max-width: 600px) {
 		flex-direction: column;
 		gap: 0.5rem;
 	}
