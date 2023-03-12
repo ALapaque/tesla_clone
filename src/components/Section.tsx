@@ -3,7 +3,6 @@ import ItemText from "./ui/ItemText";
 import ButtonGroup from "./ui/ButtonGroup";
 import LeftButton from "./ui/LeftButton";
 import RightButton from "./ui/RightButton";
-import DownArrow from "./ui/DownArrow";
 import WrapActions from "./ui/WrapActions";
 
 interface Props {
@@ -37,8 +36,6 @@ export default function Section({title, description, backgroundImage, leftButton
 						</RightButton>
 					)}
 				</ButtonGroup>
-
-				<DownArrow src="/images/down-arrow.svg"/>
 			</WrapActions>
 		</Wrap>
 	)
