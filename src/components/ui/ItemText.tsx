@@ -4,13 +4,13 @@ const ItemText  = styled.div`
 	padding-top: 15dvh;
 	text-align: center;
 	h1 {
-		font-size: 3rem;
+		font-size: clamp(2.5rem,8dvw,4rem);
 		font-weight: 700;
 	}
 	
 	p {
-		font-size: 1.25rem;
-    font-weight: 600;
+		font-size: clamp(.5rem,8dvw,1.25rem);
+    font-weight: 500;
 	}
 `
 

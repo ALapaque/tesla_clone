@@ -2,8 +2,12 @@ import HeaderContainer from "./ui/HeaderContainer";
 import Menu from "./ui/Menu";
 import NavbarToggle from "./ui/NavbarToggle";
 import {Fade} from "react-awesome-reveal";
+import sections from "../datasources/sections";
+import SectionModel from "../models/Section.model";
 
 export default function Header() {
+	const navSections = sections.filter((section: SectionModel) => section.shownInNav)
+
 	const _getHref = (value: string): string => {
 		return `#${encodeURIComponent(value)}`
 	}
@@ -11,15 +15,15 @@ export default function Header() {
 	return (
 		<HeaderContainer>
 			<Fade direction={"down"}>
-				<a href="#">
+				<a href={_getHref(navSections[0].title)}>
 					<img id="logo" src='/images/tesla.svg' alt="tesla_logo"/>
 				</a>
 
 				<Menu>
-					<a href={_getHref('Model S')}>Model S</a>
-					<a href={_getHref('Model 3')}>Model 3</a>
-					<a href={_getHref('Model X')}>Model X</a>
-					<a href={_getHref('Model Y')}>Model Y</a>
+					{navSections
+						.map((section: SectionModel) => section.title)
+						.map((name: string) => <a href={_getHref(name)}>{name}</a>)
+					}
 				</Menu>
 
 				<NavbarToggle>

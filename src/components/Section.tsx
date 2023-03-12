@@ -8,17 +8,17 @@ import {Fade} from "react-awesome-reveal";
 
 interface Props {
 	title: string,
-	backgroundImage: string,
+	image: string,
 	description?: string,
 	leftButtonText?: string,
 	rightButtonText?: string
 }
 
-export default function Section({title, description, backgroundImage, leftButtonText, rightButtonText}: Props) {
+export default function Section({title, description, image, leftButtonText, rightButtonText}: Props) {
 	return (
 		<Wrap
 			id={encodeURIComponent(title)}
-			backgroundImage={backgroundImage}>
+			backgroundImage={image}>
 			<ItemText>
 				<Fade
 					triggerOnce
