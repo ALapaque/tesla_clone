@@ -9,6 +9,7 @@ const NavbarBackdrop = styled.div`
 	background-color: rgba(32, 32, 32, .05);
 	backdrop-filter: blur(16px);
   z-index: 2;
+	transition: backdrop-filter 1s ease-in-out;
 `
 
 export default NavbarBackdrop
