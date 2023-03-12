@@ -11,10 +11,10 @@ export default function Header() {
 	return (
 		<HeaderContainer>
 			<Fade direction={"down"}>
-
 				<a href="#">
 					<img id="logo" src='/images/tesla.svg' alt="tesla_logo"/>
 				</a>
+
 				<Menu>
 					<a href={_getHref('Model S')}>Model S</a>
 					<a href={_getHref('Model 3')}>Model 3</a>

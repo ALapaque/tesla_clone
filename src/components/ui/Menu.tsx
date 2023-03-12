@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const Menu = styled.div`
+const Menu = styled.nav`
   display: flex;
   align-items: center;
   flex: 1;

@@ -13,7 +13,12 @@ const HeaderContainer = styled.header`
 	
 	img#logo {
 		height: 2vh;
-		max-width: 30vw;
+    width: 25vw;
+    max-width: 200px;
+	}
+	
+	nav {
+		margin-left: -7.5vw;
 	}
 `
 
