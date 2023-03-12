@@ -10,6 +10,32 @@ body {
     width: 100%;
 }
 
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #616161 #ffffff;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #ffffff;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #616161;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+}
+
 @keyframes animateDown {
     0%,
     20%,

@@ -1,10 +1,10 @@
-import Container from "./ui/Container";
+import SectionContainer from "./ui/SectionContainer";
 import Section from "./Section";
 import DownArrow from "./ui/DownArrow";
 
 export default function Home() {
 	return (
-		<Container>
+		<SectionContainer>
 			<Section
 				title="Model S"
 				description="Order Online for TouchLess Delivery"
@@ -47,6 +47,6 @@ export default function Home() {
 			/>
 
 			<DownArrow src="/images/down-arrow.svg"/>
-		</Container>
+		</SectionContainer>
 	)
 }

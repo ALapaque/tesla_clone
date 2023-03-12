@@ -4,6 +4,7 @@ import ButtonGroup from "./ui/ButtonGroup";
 import LeftButton from "./ui/LeftButton";
 import RightButton from "./ui/RightButton";
 import WrapActions from "./ui/WrapActions";
+import {Fade} from "react-awesome-reveal";
 
 interface Props {
 	title: string,
@@ -16,27 +17,37 @@ interface Props {
 export default function Section({title, description, backgroundImage, leftButtonText, rightButtonText}: Props) {
 	return (
 		<Wrap backgroundImage={backgroundImage}>
-			<ItemText>
-				<h1>{title}</h1>
-				{description && (
-					<p>{description}</p>
-				)}
-			</ItemText>
+			<Fade
+				cascade
+				direction={"up"}
+				triggerOnce>
+				<ItemText>
+					<h1>{title}</h1>
+					{description && (
+						<p>{description}</p>
+					)}
+				</ItemText>
+			</Fade>
 
-			<WrapActions>
-				<ButtonGroup>
-					{leftButtonText && (
-						<LeftButton>
-							{leftButtonText}
-						</LeftButton>
-					)}
-					{rightButtonText && (
-						<RightButton>
-							{rightButtonText}
-						</RightButton>
-					)}
-				</ButtonGroup>
-			</WrapActions>
+			<Fade
+				cascade
+				direction={"up"}
+				triggerOnce>
+				<WrapActions>
+					<ButtonGroup>
+						{leftButtonText && (
+							<LeftButton>
+								{leftButtonText}
+							</LeftButton>
+						)}
+						{rightButtonText && (
+							<RightButton>
+								{rightButtonText}
+							</RightButton>
+						)}
+					</ButtonGroup>
+				</WrapActions>
+			</Fade>
 		</Wrap>
 	)
 }

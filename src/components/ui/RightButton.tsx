@@ -2,9 +2,8 @@ import styled from "styled-components";
 import BaseButton from "./BaseButton";
 
 const RightButton = styled(BaseButton)`
-  background-color: white;
+  background-color: rgba(255,255,255, .65);
 	color: black;
-	opacity: 0.65;
 `
 
 export default RightButton
