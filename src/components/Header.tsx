@@ -4,23 +4,28 @@ import NavbarToggle from "./ui/NavbarToggle";
 import {Fade} from "react-awesome-reveal";
 
 export default function Header() {
+	const _getHref = (value: string): string => {
+		return `#${encodeURIComponent(value)}`
+	}
+
 	return (
-		<Fade cascade>
-			<HeaderContainer>
-				<a href="">
+		<HeaderContainer>
+			<Fade direction={"down"}>
+
+				<a href="#">
 					<img id="logo" src='/images/tesla.svg' alt="tesla_logo"/>
 				</a>
 				<Menu>
-					<a href="#">Model S</a>
-					<a href="#">Model 3</a>
-					<a href="#">Model X</a>
-					<a href="#">Model Y</a>
+					<a href={_getHref('Model S')}>Model S</a>
+					<a href={_getHref('Model 3')}>Model 3</a>
+					<a href={_getHref('Model X')}>Model X</a>
+					<a href={_getHref('Model Y')}>Model Y</a>
 				</Menu>
 
 				<NavbarToggle>
 					<span>Menu</span>
 				</NavbarToggle>
-			</HeaderContainer>
-		</Fade>
+			</Fade>
+		</HeaderContainer>
 	)
 }

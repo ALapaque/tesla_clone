@@ -16,23 +16,23 @@ interface Props {
 
 export default function Section({title, description, backgroundImage, leftButtonText, rightButtonText}: Props) {
 	return (
-		<Wrap backgroundImage={backgroundImage}>
-			<Fade
-				cascade
-				direction={"up"}
-				triggerOnce>
-				<ItemText>
+		<Wrap
+			id={encodeURIComponent(title)}
+			backgroundImage={backgroundImage}>
+			<ItemText>
+				<Fade
+					cascade
+					direction={"up"}>
 					<h1>{title}</h1>
 					{description && (
 						<p>{description}</p>
 					)}
-				</ItemText>
-			</Fade>
+				</Fade>
+			</ItemText>
 
 			<Fade
 				cascade
-				direction={"up"}
-				triggerOnce>
+				direction={"up"}>
 				<WrapActions>
 					<ButtonGroup>
 						{leftButtonText && (
