@@ -21,6 +21,7 @@ export default function Section({title, description, backgroundImage, leftButton
 			backgroundImage={backgroundImage}>
 			<ItemText>
 				<Fade
+					triggerOnce
 					cascade
 					direction={"up"}>
 					<h1>{title}</h1>
@@ -31,6 +32,7 @@ export default function Section({title, description, backgroundImage, leftButton
 			</ItemText>
 
 			<Fade
+				triggerOnce
 				cascade
 				direction={"up"}>
 				<WrapActions>

@@ -6,7 +6,7 @@ interface Props {
 
 const Wrap = styled.section<Props>`
   width: 100%;
-  height: 100vh;
+  height: 100dvh;
   background-image: url(${props => props.backgroundImage});
 	background-position: center;
 	background-repeat: no-repeat;
