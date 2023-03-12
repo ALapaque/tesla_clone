@@ -12,7 +12,7 @@ const HeaderContainer = styled.header`
 	padding: 0 20px;
 	
 	img#logo {
-		height: 2vh;
+		height: 2dvh;
     width: 25vw;
     max-width: 200px;
 	}
