@@ -35,7 +35,7 @@ export default function Home() {
 			<Section
 				title="Solar panels"
 				description="Order Online for TouchLess Delivery"
-				backgroundImage="images/solar-panels.jpg"
+				backgroundImage="images/solar-panel.jpg"
 				leftButtonText="Custom Order"
 				rightButtonText="Existing Inventory"
 			/>
