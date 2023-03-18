@@ -5,6 +5,7 @@ const NavbarCloseButton = styled.img`
 	justify-self: flex-end;
 	width: 40px;
   height: 40px;
+	cursor: pointer;
 `
 
 export default NavbarCloseButton

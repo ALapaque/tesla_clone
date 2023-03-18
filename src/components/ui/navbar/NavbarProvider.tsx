@@ -1,20 +1,22 @@
-import {ReactNode, useState} from "react";
+import {ReactNode} from "react";
 import NavbarContext from "./NavbarContext";
+import {useCycle} from "framer-motion";
 
 interface Props {
 	children: ReactNode
 }
 
 export default function NavbarProvider({children}: Props) {
-	const [state, setState] = useState<boolean>(false)
+	const [open, cycleOpen] = useCycle(false, true);
+
 
 	const _toggle = () => {
-		setState(!state)
+		cycleOpen()
 	}
 
 	return (
 		<NavbarContext.Provider value={{
-			state,
+			state: open,
 			toggle: _toggle
 		}}>
 			{children}

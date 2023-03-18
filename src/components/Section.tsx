@@ -4,8 +4,8 @@ import ButtonGroup from "./ui/ButtonGroup";
 import LeftButton from "./ui/section/LeftButton";
 import RightButton from "./ui/section/RightButton";
 import WrapActions from "./ui/section/WrapActions";
-import {Fade} from "react-awesome-reveal";
 import SectionIndicator from "./ui/section/SectionIndicator";
+import {motion} from "framer-motion";
 
 interface Props {
 	title: string,
@@ -31,19 +31,56 @@ export default function Section(
 			id={encodeURIComponent(title)}
 			backgroundImage={image}>
 			<ItemText>
-				<Fade
-					cascade
-					direction={"up"}>
-					<h1>{title}</h1>
-					{description && (
-						<p>{description}</p>
-					)}
-				</Fade>
+				<motion.h1
+					initial={{
+						y: 300,
+						opacity: 0,
+					}}
+					whileInView={{
+						y: 0,
+						opacity: 1,
+					}}
+					transition={{
+						duration: 0.75,
+						delay: 0.5
+					}}>
+					{title}
+				</motion.h1>
+				{description && (
+					<motion.p
+						initial={{
+							y: 300,
+							opacity: 0,
+						}}
+						whileInView={{
+							y: 0,
+							opacity: 1,
+							scale: 1
+						}}
+						transition={{
+							duration: 0.75,
+							delay: 0.625
+						}}>
+						{description}
+					</motion.p>
+				)}
 			</ItemText>
 
 
-			<WrapActions>
-				<Fade cascade delay={500} direction={"up"}>
+			<motion.div
+				initial={{
+					y: -300,
+					opacity: 0,
+				}}
+				whileInView={{
+					y: 0,
+					opacity: 1,
+				}}
+				transition={{
+					duration: 1,
+					delay: 0.5
+				}}>
+				<WrapActions>
 					<ButtonGroup>
 						{leftButtonText && (
 							<LeftButton>
@@ -56,8 +93,8 @@ export default function Section(
 							</RightButton>
 						)}
 					</ButtonGroup>
-				</Fade>
-			</WrapActions>
+				</WrapActions>
+			</motion.div>
 
 			{showIndicator && <SectionIndicator/>}
 		</Wrap>
